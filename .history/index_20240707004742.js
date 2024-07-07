@@ -1,0 +1,17 @@
+const express = require('express');
+co
+const passport = require('passport');
+
+const app = express();
+
+
+app.set('view engine', 'ejs')
+
+app.get('/', (req,res) => {
+  res.render('home');
+})
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+  

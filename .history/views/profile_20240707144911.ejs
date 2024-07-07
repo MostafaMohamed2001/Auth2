@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OAuth Tutorials - Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .profile-info {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+    }
+
+    .profile-info img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .profile-info span {
+      color: #fff;
+      font-size: 18px;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+      margin-top: 80px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .profile-details {
+      text-align: left;
+    }
+
+    .profile-details p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .logout-button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .logout-button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/">Home Page</a></li>
+      <li><a href="/auth/logout">Logout</a></li>
+    </ul>
+    <div class="profile-info">
+      <img src="<" alt="User Image">
+      <span><%= user.username %></span>
+    </div>
+  </nav>
+
+  <main>
+    <h1>User Profile</h1>
+    <div class="profile-details">
+      <p><strong>Name:</strong> User Name</p>
+      <p><strong>Email:</strong> user@example.com</p>
+      <p><strong>Google ID:</strong> user-google-id</p>
+    </div>
+    <button class="logout-button" onclick="window.location.href='/auth/logout'">Logout</button>
+  </main>
+</body>
+</html>
